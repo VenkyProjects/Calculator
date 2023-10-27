@@ -7,6 +7,25 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #3c3939;
 }
+.second{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.rectangle{
+    padding: 20px;
+    width: 256px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #D6FF58;
+}
 .display {
     display: flex;
     color: white;
@@ -26,6 +45,14 @@
     grid-row: 5; /* Place it in the 5th row */
     grid-column: span 2; /* Make it span 2 columns */
 }
+.buttons > :nth-child(20) {
+    grid-row: 6; /* Place it in the 5th row */
+    grid-column: span 4; /* Make it span 2 columns */
+}
+.buttons > :nth-child(21) {
+    grid-row: 6; /* Place it in the 5th row */
+    grid-column: span 2; /* Make it span 2 columns */
+}
 .operations{
     /* background-color: #FF9500; */
     background-color: #fa9a10;
@@ -33,6 +60,7 @@
 }
 .digits{
     background-color: #b0b0b6;
+    cursor: pointer;
 }
 .symbols{
     background-color: #5a5757;
@@ -45,4 +73,54 @@ button {
     color: white;
     cursor: pointer;
     /* transition: background-color 0.3s; */
-  }
+}
+span{
+    font-weight: bold;
+    display: flex;
+}
+.para{
+    font-size: 12px;
+    display: flex;
+    color:999595
+}
+.formdata{
+    padding: 20px;
+}
+
+.form_container form div {
+    margin-bottom: 15px;
+}
+
+.form_container input[type="number"] {
+    width: 91%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form_container button[type="submit"], .form-container button[type="button"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form_container button[type="submit"]:hover, .form-container button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for error messages */
+.form_container div.error {
+    color: #d9534f;
+    font-size: 14px;
+}
+.adjust{
+    margin-bottom:20px;
+}
+.first_div{
+    margin-bottom: 10px;
+}

@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import SimpleInterest from './SimpleInterst';
 
 function Calculator() {
     const [display, setDisplay] = useState('0');
     const [previous, setPrevious] = useState('0');
     const [operator, setOperator] = useState(null);
+    const[interest,setInterest]=useState(false)
+    const[finalInterst,setFinalInterst]=useState()
   
     const handleDisplay = (val) => {
         if (display === '0' || operator) {
@@ -85,12 +88,17 @@ function Calculator() {
     }
     if (display.length >= 15 && display.length < 30) {
         fontSize = '20px';
-    }
-  
+  }
+  const handleSimpleInterst=()=>{
+    setInterest(!interest)
+  }
   return (
+    <>
+    {!interest && (
     <div className={styles.top}>
       <div style={{fontSize}} className={styles.display}>{display}</div>
-      <div className={styles.buttons}>
+      
+        <div className={styles.buttons}>
         <button onClick={() => handleClear()} className={styles.symbols}>
           AC
         </button>
@@ -144,8 +152,33 @@ function Calculator() {
         <button onClick={() => handleEquals()} className={styles.operations}>
           =
         </button>
+        <button onClick={() => handleSimpleInterst()} className={styles.digits}>
+          Simple Interest
+        </button>
+        {/* <button onClick={() => handleEquals()} className={styles.digits}>
+          Compound Interest
+        </button> */}
       </div>
+      
+      
     </div>
+    )} 
+    {interest && (
+      <div className={styles.second}>
+          <div className={styles.first_div}>
+            <span>Simple Calculator</span>
+            <div className={styles.para}>calculate Your Simple Interst Easly</div>
+          </div>
+          <div className={styles.rectangle}>
+            <div>{finalInterst? finalInterst : 0}</div>
+            Simple Interest
+          </div>
+          <div className={styles.formdata}>
+            <SimpleInterest setFinalInterst={setFinalInterst} setInterest={setInterest} interest={interest}/>
+          </div>
+      </div>
+    )}
+    </>
   );
 }
 
