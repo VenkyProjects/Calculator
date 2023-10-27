@@ -1,0 +1,48 @@
+.top{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #3c3939;
+}
+.display {
+    display: flex;
+    color: white;
+    justify-content: end;
+    font-size: 48px;
+    margin-top: 30px;
+    font-weight: 200;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 0;
+}
+.buttons > :nth-child(17) {
+    grid-row: 5; /* Place it in the 5th row */
+    grid-column: span 2; /* Make it span 2 columns */
+}
+.operations{
+    /* background-color: #FF9500; */
+    background-color: #fa9a10;
+
+}
+.digits{
+    background-color: #b0b0b6;
+}
+.symbols{
+    background-color: #5a5757;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 0.5px solid black;
+    color: white;
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+  }
