@@ -10,7 +10,7 @@
 .display {
     display: flex;
     color: white;
-    justify-content: end;
+    justify-content: flex-end;
     font-size: 48px;
     margin-top: 30px;
     font-weight: 200;
