@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import styles from './styles.module.css'
 
-function SimpleInterest({setFinalInterst,setInterest,interest}){
+function SimpleInterest({setFinalInterst,setInterest,interest,setTotalAmount}){
     const initialValues = {
         principal: '',
         rate: '',
@@ -21,9 +21,12 @@ function SimpleInterest({setFinalInterst,setInterest,interest}){
         const { principal, rate, time } = values;
         const simpleInterest = (principal * rate * time) / (100*30);
         setFinalInterst(simpleInterest)
+        setTotalAmount(principal+simpleInterest)
     }; 
     const handleback=()=>{
         setInterest(!interest)
+        setFinalInterst(0)
+        setTotalAmount(0)
     }
     return(
         <div>

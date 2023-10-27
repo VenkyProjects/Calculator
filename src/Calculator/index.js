@@ -8,6 +8,7 @@ function Calculator() {
     const [operator, setOperator] = useState(null);
     const[interest,setInterest]=useState(false)
     const[finalInterst,setFinalInterst]=useState()
+    const[totalAmount,setTotalAmount]=useState()
   
     const handleDisplay = (val) => {
         if (display === '0' || operator) {
@@ -170,11 +171,11 @@ function Calculator() {
             <div className={styles.para}>calculate Your Simple Interst Easly</div>
           </div>
           <div className={styles.rectangle}>
-            <div>{finalInterst? finalInterst : 0}</div>
-            Simple Interest
+            <div>Simple Interest:{finalInterst? finalInterst : 0}</div>
+            Total Amount:{totalAmount}
           </div>
           <div className={styles.formdata}>
-            <SimpleInterest setFinalInterst={setFinalInterst} setInterest={setInterest} interest={interest}/>
+            <SimpleInterest setFinalInterst={setFinalInterst} setInterest={setInterest} interest={interest} setTotalAmount={setTotalAmount}/>
           </div>
       </div>
     )}
