@@ -172,7 +172,7 @@ function Calculator() {
           </div>
           <div className={styles.rectangle}>
             <div>Simple Interest:{finalInterst? finalInterst : 0}</div>
-            Total Amount:{totalAmount}
+            Total Amount:{totalAmount ? totalAmount : 0}
           </div>
           <div className={styles.formdata}>
             <SimpleInterest setFinalInterst={setFinalInterst} setInterest={setInterest} interest={interest} setTotalAmount={setTotalAmount}/>
